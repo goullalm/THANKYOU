@@ -1,0 +1,19 @@
+$background: #222224;
+$h1: rgba(255, 255, 255, 0.86);
+$h3: rgba(255, 255, 255, 0.53);
+
+@import "./thank";
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
+}
+html, body {
+    background-color: $background;
+    width: 100%;
+    height: 100%;overflow: hidden;
+}

@@ -1,0 +1,100 @@
+$tab1: 758px;
+@mixin tab1 {
+    @media (max-width: #{$tab1}) {
+        @content;
+    }
+}
+$tab2: 680px;
+@mixin tab2 {
+    @media (max-width: #{$tab2}) {
+        @content;
+    }
+}
+.navbar{
+    margin: auto 6.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+.main{
+    margin: auto 6.5%;
+    margin-top: 140px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    h1{
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 115px;
+        color: $h1;
+        @include tab1 {
+            font-size: 32px;
+            line-height: 60px;
+        }
+        @include tab2 {
+            font-size: 24px;
+            line-height: 40px;
+        }
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
+
+    }
+    h3{
+        font-weight: 800;
+        font-size: 13px;
+        line-height: 24px;
+        color: $h1;
+        @include tab1 {
+            font-size: 9px;
+        }
+        @include tab2 {
+            font-size: 7px;
+        }
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+    
+        
+    }
+    a{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        margin-top: 60px;
+        text-decoration: none;color: #7D87E6;
+        &:hover{
+            color: #0918CD;
+        }
+        @include tab1 {
+            margin-top: 40px;
+        }
+        span{
+            margin-right: 5px;
+            font-size: 30px;
+            line-height: 36px;
+            @include tab1 {
+                font-size: 20px;
+                line-height: 26px;
+            }
+            text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+            0px 8px 13px rgba(0,0,0,0.1),
+            0px 18px 23px rgba(0,0,0,0.1);
+        }
+        p{
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 24px;
+            font-size: 10px;
+            line-height: 20px;
+            text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+            0px 8px 13px rgba(0,0,0,0.1),
+            0px 18px 23px rgba(0,0,0,0.1);
+            
+        }
+    }
+}
